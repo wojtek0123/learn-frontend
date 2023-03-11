@@ -1,1 +1,29 @@
 /* You can add global styles to this file, and also import other style files */
+:root {
+	--background-color: #202124;
+	--text-color: #fff;
+	--background-button-color: #66b933;
+	--button-text-color: #202124;
+	--rounded: 0.25rem;
+}
+
+body {
+	min-height: 100svh;
+	background-color: var(--background-color);
+	color: var(--text-color);
+	font-family: 'Roboto', sans-serif;
+  padding: 0 1rem;
+}
+
+.button-global {
+	border-radius: var(--rounded);
+	border: none;
+	background-color: var(--background-button-color);
+	color: var(--button-text-color);
+	padding: 0.5rem 1rem;
+  transition: opacity 0.3s ease-in;
+}
+
+.button-global:hover {
+	opacity: 0.7;
+}
