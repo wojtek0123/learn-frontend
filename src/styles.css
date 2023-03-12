@@ -1,10 +1,17 @@
 /* You can add global styles to this file, and also import other style files */
+*, *::after, *::before {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
 :root {
 	--background-color: #202124;
 	--text-color: #fff;
 	--background-button-color: #66b933;
 	--button-text-color: #202124;
-	--rounded: 0.25rem;
+	--rounded: 0.5rem;
+	--background-element-color: #303136;
 }
 
 body {
