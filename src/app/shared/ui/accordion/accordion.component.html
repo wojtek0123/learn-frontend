@@ -1,0 +1,9 @@
+<div class="accordion-container">
+  <button class="accordion-title" type="button" (click)="onShow()">
+    <p>{{ question }}</p>
+    <span>{{ show ? 'Hide' : 'Show' }} answer</span>
+  </button>
+  <div class="accordion-body" [ngClass]="{ show: show }">
+    {{ answer }}
+  </div>
+</div>
