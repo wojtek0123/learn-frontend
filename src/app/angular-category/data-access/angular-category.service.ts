@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import request, { gql } from 'graphql-request';
+import { Information } from 'src/app/models/information.model';
 import { environment } from 'src/environments/environments';
 
 const getData = gql`
@@ -20,8 +21,11 @@ const getData = gql`
 @Injectable({
   providedIn: 'root',
 })
-export class AngularService {
+export class AngularCategoryService {
   getData() {
-    return request(environment.graphCmsEndpoint, getData);
+    return request<{ informations: Information[] }>(
+      environment.graphCmsEndpoint,
+      getData
+    );
   }
 }
