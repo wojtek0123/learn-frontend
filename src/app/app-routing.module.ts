@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
-import { LearnAngularComponent } from './learn-angular/learn-angular.component';
+import { AngularCategoryComponent } from './angular-category/angular-category.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 
 const routes: Routes = [
@@ -11,7 +11,7 @@ const routes: Routes = [
   },
   {
     path: 'learn-angular',
-    component: LearnAngularComponent,
+    component: AngularCategoryComponent,
   },
   {
     path: '**',

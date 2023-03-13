@@ -5,7 +5,7 @@ import { CommonModule } from '@angular/common';
   selector: 'app-learn-angular',
   standalone: true,
   imports: [CommonModule],
-  templateUrl: './learn-angular.component.html',
-  styleUrls: ['./learn-angular.component.css'],
+  templateUrl: './angular-category.component.html',
+  styleUrls: ['./angular-category.component.css'],
 })
-export class LearnAngularComponent {}
+export class AngularCategoryComponent {}
