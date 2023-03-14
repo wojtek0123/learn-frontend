@@ -9,9 +9,10 @@ import { CommonModule } from '@angular/common';
   styleUrls: ['./accordion.component.css'],
 })
 export class AccordionComponent {
-  @Input() question!: string;
-  @Input() answer!: string;
+  @Input() question = '';
+  @Input() answer: string[] = [];
   show = false;
+
   onShow() {
     this.show = !this.show;
   }

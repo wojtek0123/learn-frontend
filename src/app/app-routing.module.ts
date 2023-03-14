@@ -10,12 +10,17 @@ const routes: Routes = [
     component: HomeComponent,
   },
   {
-    path: 'learn-angular',
-    component: AngularCategoryComponent,
-  },
-  {
-    path: '**',
-    component: NotFoundComponent,
+    path: 'category',
+    children: [
+      {
+        path: 'angular',
+        component: AngularCategoryComponent,
+      },
+      {
+        path: '**',
+        component: NotFoundComponent,
+      },
+    ],
   },
 ];
 

@@ -4,6 +4,8 @@
     <span>{{ show ? 'Hide' : 'Show' }} answer</span>
   </button>
   <div class="accordion-body" [ngClass]="{ show: show }">
-    {{ answer }}
+    <p class="accordion-text" *ngFor="let substring of answer">
+      {{ substring.replace('\\n', '') }}
+    </p>
   </div>
 </div>

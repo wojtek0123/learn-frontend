@@ -1,1 +1,7 @@
-<p>learn-angular works!</p>
+<div class="wrapper">
+  <div *ngFor="let data of (data | async)?.records">
+    <app-accordion
+      [answer]="data.answer.split('\n')"
+      [question]="data.question"></app-accordion>
+  </div>
+</div>

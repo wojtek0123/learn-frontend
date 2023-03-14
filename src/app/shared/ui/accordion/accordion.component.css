@@ -1,6 +1,5 @@
 .accordion-container {
   background-color: var(--background-element-color);
-	max-width: 50rem;
 	margin: 1rem;
 	border-radius: var(--rounded);
 	padding: 1rem;
@@ -40,4 +39,8 @@
 	margin-top: 1rem;
 	height: 100%;
 	overflow: auto;
+}
+
+.accordion-text {
+	margin-top: 1rem;
 }

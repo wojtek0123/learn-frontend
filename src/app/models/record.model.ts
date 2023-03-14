@@ -1,6 +1,6 @@
 import { Categories } from './categories.model';
 
-export interface Information {
+export interface Record {
   id: string;
   question: string;
   answer: string;
