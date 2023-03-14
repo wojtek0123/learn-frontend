@@ -1,0 +1,34 @@
+.navigation {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	max-width: 1200px;
+	width: 100%;
+	margin: 0 auto;
+	padding: 1rem 0;
+}
+
+.navigation-links-wrapper {
+	display: flex;
+	align-items: center;
+	list-style-type: none;
+}
+
+.navigation-link {
+  padding: 0.25rem;
+	margin: 0 0.5rem;
+	cursor: pointer;
+}
+
+.navigation-logo a {
+	text-decoration: none;
+	color: var(--font-color);
+}
+
+.navigation-logo a:active {
+	color: var(--font-color);
+}
+
+.navigation-logo a:focus {
+	color: var(--font-color);
+}
