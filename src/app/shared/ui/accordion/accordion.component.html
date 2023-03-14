@@ -1,11 +1,11 @@
 <div class="accordion-container">
-  <button class="accordion-title" type="button" (click)="onShow()">
-    <p>{{ question }}</p>
-    <span>{{ show ? 'Hide' : 'Show' }} answer</span>
+  <h2 class="accordion-title">{{ question }}</h2>
+  <button class="accordion-expand-btn" type="button" (click)="onShow()">
+    {{ show ? 'Hide' : 'Show' }} answer
   </button>
   <div class="accordion-body" [ngClass]="{ show: show }">
     <p class="accordion-text" *ngFor="let substring of answer">
-      {{ substring.replace('\\n', '') }}
+      {{ substring }}
     </p>
   </div>
 </div>
