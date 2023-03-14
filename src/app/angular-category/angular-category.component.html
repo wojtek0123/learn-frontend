@@ -1,7 +1,5 @@
 <div class="wrapper">
-  <div *ngFor="let data of (data | async)?.records">
-    <app-accordion
-      [answer]="data.answer.split('\n')"
-      [question]="data.question"></app-accordion>
+  <div *ngFor="let record of (data | async)?.records">
+    <app-accordion [record]="record"></app-accordion>
   </div>
 </div>

@@ -13,6 +13,10 @@ export const getRecords = (category: Categories) => {
         question
         updatedAt
         createdAt
+        answerMd {
+          id
+          url
+        }
       }
     }
   `;

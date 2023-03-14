@@ -47,6 +47,22 @@
 	margin-bottom: 1rem;
 }
 
+.markdown ::ng-deep p {
+	letter-spacing: 0.05rem;
+	margin-top: 2rem;
+	font-family: 'Roboto', sans-serif;
+	font-size: 1.2rem;
+}
+
+.markdown ::ng-deep h2 {
+	margin: 2rem 0;
+	font-size: 1.65rem;
+}
+
+.markdown ::ng-deep a {
+	color: var(--font-color);
+}
+
 @media (min-width: 1280px) {
 	.accordion-title {
 		font-size: 1.8rem;

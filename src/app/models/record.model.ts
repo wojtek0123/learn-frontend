@@ -1,3 +1,4 @@
+import { AnswerMd } from './answerMd.model';
 import { Categories } from './categories.model';
 
 export interface Record {
@@ -9,4 +10,5 @@ export interface Record {
   updatedAt: string;
   publishedAt: string;
   createdAt: string;
+  answerMd: AnswerMd;
 }

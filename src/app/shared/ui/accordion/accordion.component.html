@@ -1,11 +1,14 @@
 <div class="accordion-container">
-  <h2 class="accordion-title">{{ question }}</h2>
+  <h2 class="accordion-title">{{ record.question }}</h2>
   <button class="accordion-expand-btn" type="button" (click)="onShow()">
     {{ show ? 'Hide' : 'Show' }} answer
   </button>
   <div class="accordion-body" [ngClass]="{ show: show }">
-    <p class="accordion-text" *ngFor="let substring of answer">
-      {{ substring }}
-    </p>
+    <div
+      class="markdown"
+      lineNumbers
+      markdown
+      [src]="record.answerMd.url"
+      [srcRelativeLink]="true"></div>
   </div>
 </div>
