@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
-import { AngularCategoryComponent } from './angular-category/angular-category.component';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { LearnComponent } from './learn/learn.component';
 
 const routes: Routes = [
   {
@@ -13,8 +13,8 @@ const routes: Routes = [
     path: 'category',
     children: [
       {
-        path: 'angular',
-        component: AngularCategoryComponent,
+        path: ':category',
+        component: LearnComponent,
       },
       {
         path: '**',

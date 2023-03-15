@@ -1,0 +1,9 @@
+<div class="wrapper">
+  <div *ngFor="let record of (data | async)?.records">
+    <app-accordion [record]="record"></app-accordion>
+  </div>
+  <div class="message-wrapper" *ngIf="(data | async)?.records?.length === 0">
+    <span class="message-text"> No questions to display! </span>
+    <a class="message-link button-global" [routerLink]="''">Go back</a>
+  </div>
+</div>

@@ -48,7 +48,7 @@
 }
 
 .markdown ::ng-deep p {
-	letter-spacing: 0.05rem;
+	/* letter-spacing: 0.025rem; */
 	margin-top: 2rem;
 	font-family: 'Roboto', sans-serif;
 	font-size: 1.2rem;

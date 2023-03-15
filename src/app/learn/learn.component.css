@@ -1,0 +1,25 @@
+.wrapper {
+	max-width: 1200px;
+	width: 100%;
+	margin: 0 auto;
+}
+
+.message-wrapper {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	margin-top: 5rem;
+	font-size: 1.4rem;
+}
+
+.message-text {
+	display: block;
+}
+
+.message-link {
+	color: var(--font-color);
+	text-decoration: none;
+	max-width: max-content;
+	margin-top: 1.5rem;
+}

@@ -1,8 +1,8 @@
 <div class="button-wrapper">
-  <a routerLink="/html" class="link">HTML</a>
-  <a routerLink="/css" class="link">CSS</a>
-  <a routerLink="/javascript" class="link">JavaScript</a>
-  <a routerLink="/typescript" class="link">TypeScript</a>
+  <a [routerLink]="['category', 'html']" class="link">HTML</a>
+  <a [routerLink]="['category', 'css']" class="link">CSS</a>
+  <a [routerLink]="['category', 'javascript']" class="link">JavaScript</a>
+  <a [routerLink]="['category', 'typescript']" class="link">TypeScript</a>
   <a [routerLink]="['category', 'angular']" class="link">Angular</a>
-  <a routerLink="/rxjs" class="link">RxJS</a>
+  <a [routerLink]="['category', 'rxjs']" class="link">RxJS</a>
 </div>
