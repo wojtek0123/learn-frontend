@@ -4,7 +4,7 @@ import { ActivatedRoute, RouterModule } from '@angular/router';
 import { map, Observable, switchMap } from 'rxjs';
 import { RecordsService } from '../shared/data-access/records.service';
 import { Record } from '../models/record.model';
-import { AccordionComponent } from '../shared/ui/accordion/accordion.component';
+import { AccordionComponent } from './ui/accordion/accordion.component';
 
 @Component({
   selector: 'app-learn',
