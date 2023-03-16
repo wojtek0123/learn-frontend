@@ -1,0 +1,33 @@
+.container {
+	height: 100svh;
+	border-right: 1px solid #000;
+	overflow-y: scroll;
+}
+
+.container li:first-child {
+	margin-top: 1rem;
+}
+
+.container li:last-child {
+	margin-bottom: 1rem;
+}
+
+.container li {
+	margin-left: 1.5rem;
+	margin-bottom: 0.25rem;
+}
+
+.container li button {
+	border: none;
+	background-color: transparent;
+	color: var(--font-color);
+	font-size: 1rem;
+	cursor: pointer;
+}
+
+.menu-message {
+	font-weight: normal;
+	padding: 0.5rem;
+	font-size: 1.3rem;
+	margin-bottom: 1rem;
+}

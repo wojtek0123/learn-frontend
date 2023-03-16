@@ -1,0 +1,8 @@
+<ol class="container">
+  <h3 class="menu-message">Click to scroll into the view</h3>
+  <li *ngFor="let record of records">
+    <button (click)="scrollIntoView(record.id)">
+      {{ record.question }}
+    </button>
+  </li>
+</ol>

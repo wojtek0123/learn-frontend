@@ -5,11 +5,19 @@ import { map, Observable, switchMap } from 'rxjs';
 import { RecordsService } from '../shared/data-access/records.service';
 import { Record } from '../models/record.model';
 import { AccordionComponent } from './ui/accordion/accordion.component';
+import { MenuComponent } from './ui/menu/menu.component';
+import { NavigationComponent } from '../shared/ui/navigation/navigation.component';
 
 @Component({
   selector: 'app-learn',
   standalone: true,
-  imports: [CommonModule, AccordionComponent, RouterModule],
+  imports: [
+    CommonModule,
+    AccordionComponent,
+    RouterModule,
+    MenuComponent,
+    NavigationComponent,
+  ],
   templateUrl: './learn.component.html',
   styleUrls: ['./learn.component.css'],
 })
