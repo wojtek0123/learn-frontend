@@ -1,14 +1,20 @@
-<div class="accordion-container">
+<div class="accordion-container" [id]="record.id">
   <h2 class="accordion-title">{{ record.question }}</h2>
   <button class="accordion-expand-btn" type="button" (click)="onShow()">
     {{ show ? 'Hide' : 'Show' }} answer
   </button>
   <div class="accordion-body" [ngClass]="{ show: show }">
     <div
+      *ngIf="record.answerMd && !record.answer"
       class="markdown"
       lineNumbers
       markdown
       [src]="record.answerMd.url"
       [srcRelativeLink]="true"></div>
+    <div *ngIf="!record.answerMd && record.answer" class="accordion-text">
+      <p *ngFor="let paragraph of record.answer.split('\n')">
+        {{ paragraph }}
+      </p>
+    </div>
   </div>
 </div>
