@@ -1,1 +1,37 @@
-<div class="main"></div>
+<header class="header">
+  <div class="header-text">
+    <h2>Study front-end interview questions to get the dream job</h2>
+    <a class="header-link" [routerLink]="['/learn']" type="button"
+      >Start study</a
+    >
+  </div>
+  <img
+    src="../../assets/coding-workshop.svg"
+    alt="Teacher tell to the student about front-end technologies. On the board is title workshop coding"
+    class="header-image" />
+</header>
+<div class="main">
+  <section class="section">
+    <h3 class="section-title">Learn</h3>
+    <div class="section-wrapper">
+      <div class="section-body">
+        <p class="section-text">
+          You can study the interview questions from technologies such as
+          Angular, RxJS, JavaScript, TypeScript, HTML, CSS.
+        </p>
+        <p class="section-text">
+          Database of question regularly grow up so you can be up-to-date with
+          all front-end technologies changes.
+        </p>
+      </div>
+      <img
+        class="section-image"
+        src="../../assets/stack.svg"
+        alt="Icons of HTML, CSS, JavaScript, TypeScript, Angular and RxJS" />
+    </div>
+  </section>
+</div>
+<footer class="footer">
+  <span>Created by Wojciech Pietraszuk</span>
+  <span>{{ currentYear }}</span>
+</footer>
