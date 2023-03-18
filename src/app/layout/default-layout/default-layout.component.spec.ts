@@ -1,4 +1,6 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { ActivatedRoute, convertToParamMap } from '@angular/router';
+import { of } from 'rxjs';
 
 import { DefaultLayoutComponent } from './default-layout.component';
 
@@ -8,9 +10,16 @@ describe('DefaultLayoutComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [ DefaultLayoutComponent ]
-    })
-    .compileComponents();
+      imports: [DefaultLayoutComponent],
+      providers: [
+        {
+          provide: ActivatedRoute,
+          useValue: {
+            paramMap: of(convertToParamMap({ name: 'angular' })),
+          },
+        },
+      ],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(DefaultLayoutComponent);
     component = fixture.componentInstance;

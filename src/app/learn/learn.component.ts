@@ -7,6 +7,7 @@ import { Record } from '../models/record.model';
 import { AccordionComponent } from './ui/accordion/accordion.component';
 import { MenuComponent } from './ui/menu/menu.component';
 import { NavigationComponent } from '../shared/ui/navigation/navigation.component';
+import { Categories } from '../models/categories.model';
 
 @Component({
   selector: 'app-learn',
@@ -30,9 +31,11 @@ export class LearnComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.data = this.route.params.pipe(
-      map(params => params['category']),
-      switchMap(category => this.recordsService.getData(category))
+    this.data = this.route.paramMap.pipe(
+      map(params => params.get('category')),
+      switchMap(category =>
+        this.recordsService.getData((category as Categories) ?? '')
+      )
     );
   }
 }
