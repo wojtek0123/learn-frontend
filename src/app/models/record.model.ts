@@ -4,11 +4,11 @@ import { Categories } from './categories.model';
 export interface Record {
   id: string;
   question: string;
-  answer: string;
+  answer?: string;
   category: Categories;
-  linkReadMore: string;
+  linkReadMore?: string;
   updatedAt: string;
   publishedAt: string;
   createdAt: string;
-  answerMd: AnswerMd;
+  answerMd?: AnswerMd;
 }
