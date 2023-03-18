@@ -11,7 +11,7 @@ import { Record } from 'src/app/models/record.model';
   styleUrls: ['./accordion.component.css'],
 })
 export class AccordionComponent {
-  @Input() record!: Record;
+  @Input() record: Record | undefined = undefined;
   show = false;
 
   onShow() {

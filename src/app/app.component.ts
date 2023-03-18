@@ -16,6 +16,4 @@ import { NavigationComponent } from './shared/ui/navigation/navigation.component
     NavigationComponent,
   ],
 })
-export class AppComponent {
-  title = 'learn-frontend';
-}
+export class AppComponent {}

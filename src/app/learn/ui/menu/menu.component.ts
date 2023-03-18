@@ -11,7 +11,7 @@ import { RouterModule } from '@angular/router';
   styleUrls: ['./menu.component.css'],
 })
 export class MenuComponent {
-  @Input() records!: Record[];
+  @Input() records: Record[] = [];
 
   scrollIntoView(id: string) {
     document.getElementById(id)?.scrollIntoView();
