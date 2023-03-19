@@ -31,3 +31,7 @@
 	font-size: 1.3rem;
 	margin-bottom: 1rem;
 }
+
+.no-data-message {
+	margin-left: 1rem;
+}

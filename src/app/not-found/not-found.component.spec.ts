@@ -19,4 +19,12 @@ describe('NotFoundComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+  it('should display "Page not found!"', () => {
+    const header = (fixture.nativeElement as HTMLElement).querySelector(
+      'h2'
+    )?.textContent;
+
+    expect(header).toMatch(/page not found/i);
+  });
 });

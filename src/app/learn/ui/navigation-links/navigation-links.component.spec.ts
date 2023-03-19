@@ -1,7 +1,10 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-// import { ActivatedRoute } from '@angular/router';
-// import {} from '@angular/common/testing'
-import { ActivatedRoute, convertToParamMap } from '@angular/router';
+import {
+  ActivatedRoute,
+  convertToParamMap,
+  provideRouter,
+  Router,
+} from '@angular/router';
 import { of } from 'rxjs';
 
 import { NavigationLinksComponent } from './navigation-links.component';
@@ -17,9 +20,10 @@ describe('NavigationLinksComponent', () => {
         {
           provide: ActivatedRoute,
           useValue: {
-            paramMap: of(convertToParamMap({ name: 'angular' })),
+            paramMap: of(convertToParamMap({ category: 'angular' })),
           },
         },
+        provideRouter([{ path: '**', component: NavigationLinksComponent }]),
       ],
     }).compileComponents();
 
@@ -30,5 +34,24 @@ describe('NavigationLinksComponent', () => {
 
   it('should create', () => {
     expect(component).toBeTruthy();
+  });
+
+  it('should change route', async () => {
+    const links = fixture.nativeElement.querySelectorAll('a');
+    const paths = [
+      '/category/html',
+      '/category/css',
+      '/category/javascript',
+      '/category/typescript',
+      '/category/angular',
+      '/category/rxjs',
+    ];
+
+    for (let i = 0; i < links.length; i++) {
+      await links[i].click();
+
+      fixture.detectChanges();
+      expect(TestBed.inject(Router).url).toEqual(paths[i]);
+    }
   });
 });

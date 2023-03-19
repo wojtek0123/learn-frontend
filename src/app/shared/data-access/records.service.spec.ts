@@ -13,4 +13,11 @@ describe('RecordsService', () => {
   it('should be created', () => {
     expect(service).toBeTruthy();
   });
+
+  // it('', (done: DoneFn) => {
+  //   service.getData('angular').subscribe(value => {
+  //     expect(value).toBe({ records: [] });
+  //     done();
+  //   });
+  // });
 });

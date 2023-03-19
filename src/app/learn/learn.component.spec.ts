@@ -49,8 +49,6 @@ describe('LearnComponent', () => {
       ],
     }).compileComponents();
 
-    // recordsService = TestBed.inject(RecordsService);
-
     fixture = TestBed.createComponent(LearnComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
