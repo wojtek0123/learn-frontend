@@ -72,6 +72,21 @@
 	font-size: 1.2rem;
 }
 
+.markdown ::ng-deep table {
+	margin-top: 1rem;
+	padding: 0.5rem;
+	border-radius: var(--rounded);
+}
+
+.markdown ::ng-deep th {
+	padding: 0.75rem 0;
+	font-size: 1.2rem;
+}
+
+.markdown ::ng-deep tr {
+	background-color: var(--background-element-color);
+}
+
 .accordion-text ::ng-deep p {
 	margin-top: 2rem;
 	font-family: 'Roboto', sans-serif;

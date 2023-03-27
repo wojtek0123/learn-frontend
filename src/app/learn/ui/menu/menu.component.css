@@ -13,7 +13,7 @@
 }
 
 .container li {
-	margin-left: 1.5rem;
+	margin-left: 2rem;
 	margin-bottom: 0.25rem;
 }
 
@@ -23,6 +23,7 @@
 	color: var(--font-color);
 	font-size: 1rem;
 	cursor: pointer;
+	text-align: left;
 }
 
 .menu-message {
