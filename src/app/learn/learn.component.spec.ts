@@ -5,7 +5,7 @@ import { RecordsService } from '../shared/data-access/records.service';
 import { LearnComponent } from './learn.component';
 
 class MockRecordsService {
-  getData() {
+  getRecords() {
     return of({
       records: [
         {

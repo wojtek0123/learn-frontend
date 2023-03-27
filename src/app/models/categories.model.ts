@@ -4,4 +4,5 @@ export type Categories =
   | 'javascript'
   | 'typescript'
   | 'angular'
-  | 'rxjs';
+  | 'rxjs'
+  | 'all';

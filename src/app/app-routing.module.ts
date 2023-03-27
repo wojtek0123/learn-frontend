@@ -3,7 +3,6 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { LearnComponent } from './learn/learn.component';
-import { NavigationLinksComponent } from './learn/ui/navigation-links/navigation-links.component';
 import { LearnLayoutComponent } from './layout/learn-layout/learn-layout.component';
 import { DefaultLayoutComponent } from './layout/default-layout/default-layout.component';
 
@@ -16,26 +15,36 @@ const routes: Routes = [
         path: '',
         component: HomeComponent,
       },
+    ],
+  },
+  {
+    path: 'learn',
+    component: LearnLayoutComponent,
+    children: [
       {
-        path: 'learn',
-        component: NavigationLinksComponent,
+        path: '',
+        component: LearnComponent,
       },
     ],
   },
   {
-    path: 'category',
-    component: LearnLayoutComponent,
-    children: [
-      {
-        path: ':category',
-        component: LearnComponent,
-      },
-      {
-        path: '**',
-        component: NotFoundComponent,
-      },
-    ],
+    path: '**',
+    component: NotFoundComponent,
   },
+  // {
+  //   path: 'category',
+  //   component: LearnLayoutComponent,
+  //   children: [
+  //     {
+  //       path: ':category',
+  //       component: LearnComponent,
+  //     },
+  //     {
+  //       path: '**',
+  //       component: NotFoundComponent,
+  //     },
+  //   ],
+  // },
 ];
 
 @NgModule({

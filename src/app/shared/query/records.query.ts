@@ -1,18 +1,18 @@
 import { gql } from 'graphql-request';
-import { Categories } from 'src/app/models/categories.model';
 
-export const getRecords = (category: Categories) => {
+export const getRecords = () => {
   return gql`
     query Records {
-      records(where: { category: ${category} }) {
+      records(first: 1000) {
         answer
         createdAt
         id
+        category
         linkReadMore
         publishedAt
         question
-        updatedAt
         createdAt
+        updatedAt
         answerMd {
           id
           url

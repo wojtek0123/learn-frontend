@@ -1,20 +1,25 @@
 <div class="learn-wrapper">
   <div class="menu-container">
-    <app-menu [records]="(data | async)?.records ?? []"></app-menu>
+    <app-menu [records]="(filteredData$ | async) ?? []"></app-menu>
   </div>
   <div class="wrapper">
     <div class="navigation">
       <a class="navigation-link" [routerLink]="['/']">Home</a>
-      <a class="navigation-link" [routerLink]="['/learn']">Categories</a>
+      <select (change)="onSelect()" [(ngModel)]="selectedCategory">
+        <option default value="all">All</option>
+        <option value="html">HTML</option>
+        <option value="css">CSS</option>
+        <option value="javascript">JavaScript</option>
+        <option value="typescript">TypeScript</option>
+        <option value="angular">Angular</option>
+        <option value="rxjs">RxJS</option>
+      </select>
     </div>
-    <div
-      class="accordion-wrapper"
-      *ngFor="let record of (data | async)?.records">
+    <div class="accordion-wrapper" *ngFor="let record of filteredData$ | async">
       <app-accordion [record]="record"></app-accordion>
     </div>
-    <div class="message-wrapper" *ngIf="(data | async)?.records?.length === 0">
-      <span class="message-text"> No questions to display! </span>
-      <a class="message-link button-global" [routerLink]="'/learn'">Go back</a>
+    <div class="message-wrapper" *ngIf="(filteredData$ | async)?.length === 0">
+      <span class="message-text">No questions to display!</span>
     </div>
   </div>
 </div>
