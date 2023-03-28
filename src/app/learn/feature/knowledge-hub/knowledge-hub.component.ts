@@ -2,12 +2,12 @@ import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { map, Observable } from 'rxjs';
-import { RecordsService } from '../shared/data-access/records.service';
-import { Record } from '../models/record.model';
-import { AccordionComponent } from './ui/accordion/accordion.component';
-import { MenuComponent } from './ui/menu/menu.component';
-import { NavigationComponent } from '../shared/ui/navigation/navigation.component';
-import { Categories } from '../models/categories.model';
+import { RecordsService } from '../../../shared/data-access/records.service';
+import { Record } from '../../../shared/models/record.model';
+import { AccordionComponent } from '../../ui/accordion/accordion.component';
+import { MenuComponent } from '../../ui/menu/menu.component';
+import { NavigationComponent } from '../../../shared/ui/navigation/navigation.component';
+import { Categories } from '../../../shared/models/categories.model';
 import { FormsModule } from '@angular/forms';
 
 @Component({
@@ -21,10 +21,10 @@ import { FormsModule } from '@angular/forms';
     MenuComponent,
     NavigationComponent,
   ],
-  templateUrl: './learn.component.html',
-  styleUrls: ['./learn.component.css'],
+  templateUrl: './knowledge-hub.component.html',
+  styleUrls: ['./knowledge-hub.component.css'],
 })
-export class LearnComponent implements OnInit {
+export class CategoriesComponent implements OnInit {
   records$ = new Observable<{ records: Record[] }>();
   selectedCategory: Categories = 'all';
   filteredData$ = new Observable<Record[]>();

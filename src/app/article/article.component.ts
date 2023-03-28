@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { map, Observable } from 'rxjs';
-import { Article } from '../models/article.model';
+import { Article } from '../shared/models/article.model';
 import { RecordsService } from '../shared/data-access/records.service';
 import { SearchPipe } from '../shared/pipe/search.pipe';
 import { FormsModule } from '@angular/forms';

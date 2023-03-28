@@ -1,8 +1,8 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { ActivatedRoute, convertToParamMap } from '@angular/router';
 import { of } from 'rxjs';
-import { RecordsService } from '../shared/data-access/records.service';
-import { LearnComponent } from './learn.component';
+import { RecordsService } from '../../../shared/data-access/records.service';
+import { CategoriesComponent } from './knowledge-hub.component';
 
 class MockRecordsService {
   getRecords() {
@@ -29,12 +29,12 @@ class MockRecordsService {
 }
 
 describe('LearnComponent', () => {
-  let component: LearnComponent;
-  let fixture: ComponentFixture<LearnComponent>;
+  let component: CategoriesComponent;
+  let fixture: ComponentFixture<CategoriesComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [LearnComponent],
+      imports: [CategoriesComponent],
       providers: [
         {
           provide: ActivatedRoute,
@@ -49,7 +49,7 @@ describe('LearnComponent', () => {
       ],
     }).compileComponents();
 
-    fixture = TestBed.createComponent(LearnComponent);
+    fixture = TestBed.createComponent(CategoriesComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

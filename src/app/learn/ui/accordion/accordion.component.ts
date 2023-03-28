@@ -1,7 +1,7 @@
 import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { MarkdownModule } from 'ngx-markdown';
-import { Record } from 'src/app/models/record.model';
+import { Record } from 'src/app/shared/models/record.model';
 
 @Component({
   selector: 'app-accordion',

@@ -1,11 +1,11 @@
 import { Injectable } from '@angular/core';
 import request from 'graphql-request';
 import { from } from 'rxjs';
-import { Record } from 'src/app/models/record.model';
+import { Record } from 'src/app/shared/models/record.model';
 import { getRecords } from '../query/records.query';
 import { getArticles } from '../query/articles.query';
 import { environment } from '../../../environments/environment.development';
-import { Article } from 'src/app/models/article.model';
+import { Article } from 'src/app/shared/models/article.model';
 
 @Injectable({
   providedIn: 'root',

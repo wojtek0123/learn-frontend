@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { Record } from 'src/app/models/record.model';
+import { Record } from 'src/app/shared/models/record.model';
 import { RouterModule } from '@angular/router';
 
 @Component({

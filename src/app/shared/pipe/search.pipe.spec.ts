@@ -1,4 +1,4 @@
-import { Article } from 'src/app/models/article.model';
+import { Article } from 'src/app/shared/models/article.model';
 import { SearchPipe } from './search.pipe';
 
 const articles: Article[] = [
