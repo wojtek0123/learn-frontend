@@ -1,6 +1,6 @@
 import { TestBed } from '@angular/core/testing';
 
-import { RecordsService } from './records.service';
+import { RecordsService } from './graph-cms.service';
 
 describe('RecordsService', () => {
   let service: RecordsService;

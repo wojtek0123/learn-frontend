@@ -1,6 +1,6 @@
 import { gql } from 'graphql-request';
 
-export const getRecords = () => {
+export const getQuestionsAndAnswers = () => {
   return gql`
     query Records {
       records(first: 1000) {

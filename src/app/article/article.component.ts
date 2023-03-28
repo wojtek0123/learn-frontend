@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { map, Observable } from 'rxjs';
+import { Observable } from 'rxjs';
 import { Article } from '../shared/models/article.model';
-import { RecordsService } from '../shared/data-access/records.service';
+import { RecordsService } from '../shared/data-access/graph-cms.service';
 import { SearchPipe } from '../shared/pipe/search.pipe';
 import { FormsModule } from '@angular/forms';
 
@@ -20,8 +20,6 @@ export class ArticleComponent implements OnInit {
   constructor(private recordsService: RecordsService) {}
 
   ngOnInit() {
-    this.articles$ = this.recordsService
-      .getArticles()
-      .pipe(map(articles => articles.articles));
+    this.articles$ = this.recordsService.getArticles();
   }
 }

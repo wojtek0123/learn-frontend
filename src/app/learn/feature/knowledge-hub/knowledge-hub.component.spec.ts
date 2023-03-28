@@ -1,30 +1,13 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { ActivatedRoute, convertToParamMap } from '@angular/router';
 import { of } from 'rxjs';
-import { RecordsService } from '../../../shared/data-access/records.service';
+import { questionsAndAnswers } from 'src/app/shared/mock-data/questionsAndAnswers';
+import { RecordsService } from '../../../shared/data-access/graph-cms.service';
 import { CategoriesComponent } from './knowledge-hub.component';
 
 class MockRecordsService {
-  getRecords() {
-    return of({
-      records: [
-        {
-          id: '1',
-          question: 'What is Angular Framework?',
-          answer:
-            'Angular is a TypeScript-based open-source front-end platform that makes it easy to build web, mobile and desktop applications. The major features of this framework include declarative templates, dependency injection, end to end tooling which ease application development.',
-          answerMd: {
-            id: '2',
-            url: '',
-          },
-          category: 'angular',
-          createdAt: '',
-          linkReadMore: '',
-          publishedAt: '',
-          updatedAt: '',
-        },
-      ],
-    });
+  getQuestionsAndAnswers() {
+    return of(questionsAndAnswers);
   }
 }
 
