@@ -5,6 +5,7 @@ import { NotFoundComponent } from './not-found/not-found.component';
 import { LearnComponent } from './learn/learn.component';
 import { LearnLayoutComponent } from './layout/learn-layout/learn-layout.component';
 import { DefaultLayoutComponent } from './layout/default-layout/default-layout.component';
+import { ArticleComponent } from './article/article.component';
 
 const routes: Routes = [
   {
@@ -14,6 +15,10 @@ const routes: Routes = [
       {
         path: '',
         component: HomeComponent,
+      },
+      {
+        path: 'articles',
+        component: ArticleComponent,
       },
     ],
   },
