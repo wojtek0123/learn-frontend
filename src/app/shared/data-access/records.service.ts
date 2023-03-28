@@ -5,7 +5,7 @@ import { Record } from 'src/app/models/record.model';
 import { getRecords } from '../query/records.query';
 import { getArticles } from '../query/articles.query';
 import { environment } from '../../../environments/environment.development';
-import { Article } from 'src/app/models/article.mode';
+import { Article } from 'src/app/models/article.model';
 
 @Injectable({
   providedIn: 'root',

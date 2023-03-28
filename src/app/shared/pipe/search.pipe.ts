@@ -1,5 +1,5 @@
 import { Pipe, PipeTransform } from '@angular/core';
-import { Article } from '../../models/article.mode';
+import { Article } from '../../models/article.model';
 
 @Pipe({
   name: 'search',

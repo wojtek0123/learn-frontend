@@ -5,5 +5,5 @@ export interface Article {
   description: string;
   createdAt: string;
   link: string;
-  publishedAT: string;
+  publishedAt: string;
 }
