@@ -14,23 +14,23 @@ import { articles } from '../mock-data/articles';
 })
 export class RecordsService {
   getQuestionsAndAnswers() {
-    return of(questionsAndAnswers);
-    // return from(
-    //   // questionsAndAnswers
-    //   request<{ records: Record[] }>(
-    //     environment.graphCmsEndpoint,
-    //     getQuestionsAndAnswers()
-    //   )
-    // ).pipe(map(data => data.records));
+    // return of(questionsAndAnswers);
+    return from(
+      // questionsAndAnswers
+      request<{ records: Record[] }>(
+        environment.graphCmsEndpoint,
+        getQuestionsAndAnswers()
+      )
+    ).pipe(map(data => data.records));
   }
 
   getArticles() {
-    return of(articles);
-    // return from(
-    //   request<{ articles: Article[] }>(
-    //     environment.graphCmsEndpoint,
-    //     getArticles()
-    //   )
-    // ).pipe(map(data => data.articles));
+    // return of(articles);
+    return from(
+      request<{ articles: Article[] }>(
+        environment.graphCmsEndpoint,
+        getArticles()
+      )
+    ).pipe(map(data => data.articles));
   }
 }

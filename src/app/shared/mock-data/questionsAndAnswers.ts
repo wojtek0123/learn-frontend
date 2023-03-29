@@ -11,10 +11,6 @@ export const questionsAndAnswers: Record[] = [
     updatedAt: '2022-12-01',
     publishedAt: '2022-11-01',
     createdAt: '2022-10-01',
-    answerMd: {
-      id: '1',
-      url: 'https://example.com/1',
-    },
   },
   {
     id: '2',
@@ -26,10 +22,6 @@ export const questionsAndAnswers: Record[] = [
     updatedAt: '2022-12-02',
     publishedAt: '2022-11-02',
     createdAt: '2022-10-02',
-    answerMd: {
-      id: '2',
-      url: 'https://example.com/2',
-    },
   },
   {
     id: '3',
@@ -42,10 +34,6 @@ export const questionsAndAnswers: Record[] = [
     updatedAt: '2022-12-03',
     publishedAt: '2022-11-03',
     createdAt: '2022-10-03',
-    answerMd: {
-      id: '3',
-      url: 'https://example.com/3',
-    },
   },
   {
     id: '4',
@@ -57,10 +45,6 @@ export const questionsAndAnswers: Record[] = [
     updatedAt: '2022-12-04',
     publishedAt: '2022-11-04',
     createdAt: '2022-10-04',
-    answerMd: {
-      id: '4',
-      url: 'https://example.com/4',
-    },
   },
   {
     id: '5',
@@ -72,10 +56,6 @@ export const questionsAndAnswers: Record[] = [
     updatedAt: '2022-12-05',
     publishedAt: '2022-11-05',
     createdAt: '2022-10-05',
-    answerMd: {
-      id: '5',
-      url: 'https://example.com/5',
-    },
   },
   {
     id: '6',
@@ -88,10 +68,6 @@ export const questionsAndAnswers: Record[] = [
     updatedAt: '2022-11-15',
     publishedAt: '2022-11-01',
     createdAt: '2022-10-01',
-    answerMd: {
-      id: '1',
-      url: 'https://github.com/user/repo/blob/main/answers/1.md',
-    },
   },
   {
     id: '7',
@@ -104,10 +80,6 @@ export const questionsAndAnswers: Record[] = [
     updatedAt: '2022-07-15',
     publishedAt: '2022-07-01',
     createdAt: '2022-06-01',
-    answerMd: {
-      id: '2',
-      url: 'https://github.com/user/repo/blob/main/answers/2.md',
-    },
   },
   {
     id: '8',
@@ -120,10 +92,6 @@ export const questionsAndAnswers: Record[] = [
     updatedAt: '2022-08-30',
     publishedAt: '2022-08-01',
     createdAt: '2022-07-01',
-    answerMd: {
-      id: '3',
-      url: 'https://github.com/user/repo/blob/main/answers/3.md',
-    },
   },
   {
     id: '9',
@@ -135,10 +103,6 @@ export const questionsAndAnswers: Record[] = [
     updatedAt: '2022-09-15',
     publishedAt: '2022-09-01',
     createdAt: '2022-08-01',
-    answerMd: {
-      id: '4',
-      url: 'https://github.com/user/repo/blob/main/answers/4.md',
-    },
   },
   {
     id: '10',
@@ -152,9 +116,5 @@ export const questionsAndAnswers: Record[] = [
     updatedAt: '2022-10-30',
     publishedAt: '2022-10-01',
     createdAt: '2022-09-01',
-    answerMd: {
-      id: '5',
-      url: 'https://github.com/user/repo/blob/main/answers/5.md',
-    },
   },
 ];
