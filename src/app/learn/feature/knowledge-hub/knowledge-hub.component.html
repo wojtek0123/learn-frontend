@@ -5,14 +5,15 @@
   <div class="wrapper">
     <div class="navigation">
       <a class="navigation-link" [routerLink]="['/']">Home</a>
-      <select (change)="onSelect()" [(ngModel)]="selectedCategory">
+      <a class="navigation-link" [routerLink]="['/', 'articles']">Articles</a>
+      <select
+        class="select"
+        (change)="onSelect()"
+        [(ngModel)]="selectedCategory">
         <option default value="all">All</option>
-        <option value="html">HTML</option>
-        <option value="css">CSS</option>
-        <option value="javascript">JavaScript</option>
-        <option value="typescript">TypeScript</option>
-        <option value="angular">Angular</option>
-        <option value="rxjs">RxJS</option>
+        <option *ngFor="let item of (records$ | async) ?? [] | getCategories">
+          {{ item }}
+        </option>
       </select>
     </div>
     <div class="accordion-wrapper" *ngFor="let record of filteredData$ | async">

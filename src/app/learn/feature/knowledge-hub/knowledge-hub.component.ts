@@ -9,9 +9,10 @@ import { MenuComponent } from '../../ui/menu/menu.component';
 import { NavigationComponent } from '../../../shared/ui/navigation/navigation.component';
 import { Categories } from '../../../shared/models/categories.model';
 import { FormsModule } from '@angular/forms';
+import { GetCategoriesPipe } from 'src/app/shared/pipe/get-categories.pipe';
 
 @Component({
-  selector: 'app-learn',
+  selector: 'app-knowledge-hub',
   standalone: true,
   imports: [
     CommonModule,
@@ -20,11 +21,12 @@ import { FormsModule } from '@angular/forms';
     RouterModule,
     MenuComponent,
     NavigationComponent,
+    GetCategoriesPipe,
   ],
   templateUrl: './knowledge-hub.component.html',
   styleUrls: ['./knowledge-hub.component.css'],
 })
-export class CategoriesComponent implements OnInit {
+export class KnowledgeHubComponent implements OnInit {
   records$ = new Observable<Record[]>();
   selectedCategory: Categories = 'all';
   filteredData$ = new Observable<Record[]>();
@@ -32,13 +34,8 @@ export class CategoriesComponent implements OnInit {
 
   constructor(private recordsService: RecordsService) {}
 
-  ngOnInit(): void {
+  ngOnInit() {
     this.records$ = this.recordsService.getQuestionsAndAnswers();
-
-    // this.categories$ = this.records$.pipe(
-    //   map(data => data.records.flatMap(record => record.category))
-    // );
-
     this.filteredData$ = this.records$;
   }
 
